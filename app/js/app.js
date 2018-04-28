@@ -188,8 +188,8 @@ function start_game() {
     $opp1.css('top', '10%');
     $opp2.css('top', '35%');
     $opp3.css('top', '50%');
-    $opp4.css('top', '50%');
-    $car.css({'top': '-20%', left: '40%'})
+    $opp4.css('top', '-20%');
+    $car.css({'top': '90%', left: '40%'})
     
 
     speed = 2;
@@ -221,7 +221,6 @@ function start_game() {
 
   // Collision function
   function collision($obj1, $obj2) {
-
     var x1 = $obj1.offset().left;
     var y1 = $obj1.offset().top;
     var h1 = $obj1.outerHeight(true);
