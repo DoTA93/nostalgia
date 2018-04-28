@@ -16,18 +16,18 @@ gulp.task('serve', ['sass', 'compress-js'], function () {
     notify: false
   });
 
-  gulp.watch(['./src/sass/**/*.scss'], ['sass']);
-  gulp.watch(['./src/js/*.js'], ['concat']);
+  gulp.watch(['./src/sass/**/*.sass'], ['sass']);
+  gulp.watch(['./src/js/*.js'], ['compress-js']);
 
   gulp.watch('./*.html').on('change', browserSync.reload);
   gulp.watch('./src/js/*.js').on('change', browserSync.reload);
-  gulp.watch('./src/sass/*.scss').on('change', browserSync.reload);
+  gulp.watch('./src/sass/*.sass').on('change', browserSync.reload);
 
 });
 
 // sass task
 gulp.task('sass', function () {
-  return gulp.src('src/sass/*.scss')
+  return gulp.src('src/sass/*.sass')
     .pipe(plumber())
     .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(rename({ suffix: '.min' }))
@@ -45,7 +45,8 @@ gulp.task('sass', function () {
 // js compress task
 gulp.task('compress-js', function () {
   return gulp.src('./src/js/*.js')
-    .pipe(uglify())
+  .pipe(plumber())
+    // .pipe(uglify())
     // .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('app/js'));
 });

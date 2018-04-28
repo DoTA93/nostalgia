@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates')
+body
+  margin: 0
+  padding: 0
+  background-color: #4caf50
+  font-family: 'Montserrat Alternates', sans-serif
+
+.road
+  width: 100%
+  height: 100vh
+  max-width: 400px
+  background-color: #5a5a5a
+  position: relative
+  left: 50%
+  transform: translateX(-50%)
+  border-left: 5px solid #fff
+  border-right: 5px solid #fff
+  overflow: hidden
+
+  .car
+    width: 40px
+    height: 60px
+    position: absolute
+    border-radius: 10px
+    box-shadow: 4px 2px 5px 0px
+    .glass
+      height: 20%
+      width: 60%
+      position: absolute
+      background-color: #585858
+      &.f_glass      
+        left: 20%
+        top: 20%
+        border-top-right-radius: 5px
+        border-top-left-radius: 5px
+      &.b_glass      
+        left: 20%
+        bottom: 20%
+        border-bottom-right-radius: 5px
+        border-bottom-left-radius: 5px
+    .tyre
+      position: absolute
+      height: 20%
+      width: 10%
+      background-color: #333333
+      &.f_tyre_l
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+        top: 20%
+        left: -10%
+      &.f_tyre_r
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+        top: 20%
+        right: -10%
+        box-shadow: 4px 2px 5px 0px
+      &.b_tyre_r
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+        bottom: 20%
+        right: -10%
+        box-shadow: 4px 2px 5px 0px
+      &.b_tyre_l
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+        bottom: 20%
+        left: -10%
+    .light
+      width: 20%
+      height: 3%
+      background-color: #FFEB3B
+      position: absolute
+      border-top-left-radius: 15px
+      border-top-right-radius: 15px
+      &.f_light_l
+        top: -3%
+        left: 20%
+      &.f_light_r
+        top: -3%
+        right: 20%
+
+    &#hero
+      bottom: 10%
+      left: 40%
+      background-color: #ffc107
+    &#opp1
+      top: 10%
+      left: 60%
+      background-color: #03a9f4
+    &#opp2
+      top: 35%
+      left: 40%
+      background-color: #03a9f4
+    &#opp3
+      top: 50%
+      left: 65%
+      background-color: #03a9f4
+    &#opp4
+      top: -20%
+      left: 55%
+      background-color: #03a9f4
+  
+.line
+  position: absolute
+  width: 4%
+  height: 150px
+  background-color: #ffffff
+  left: 50%
+  transform: translateX(-50%)
+  &#line1
+    top: -150px
+  &#line2
+    top: 150px
+  &#line3
+    top: 450px
+
+.info-div
+  position: absolute
+  height: 100vh
+  width: 20%
+  background: #1e2021
+  right: 0
+  p
+    color: #ffffff
+    text-align: center
+    font-size: 1.5em
+.start-div,
+.restart-div
+  height: 100vh
+  position: absolute
+  width: 100%
+  background: rgba(0,0,0, 0.8)
+  z-index: 1
+  text-align: center
+  color: #fff
+  h2
+    font-size: 2em
+  p
+    font-size: 1.5em
+  .wrapper
+    height: 40%
+    background: #03A9F4
+    top: 50%
+    position: absolute
+    width: 100%
+    transform: translateY(-50%)
+    display: table
+.display-tc
+  display: table-cell
+  vertical-align: middle
+button
+  text-transform: none
+  overflow: visible
+  border-radius: 0
+.btn
+  display: inline-block
+  font-weight: 400
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  border: 1px solid transparent
+  padding: .375rem .75rem
+  font-size: 1rem
+  line-height: 1.5
+  border-radius: .25rem
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+.btn:not(:disabled):not(.disabled)
+  cursor: pointer
+[type=reset], [type=submit], button, html [type=button]
+  -webkit-appearance: button
+.btn-light
+  color: #212529
+  background-color: #f8f9fa
+  border-color: #f8f9fa
+  &:hover
+    color: #212529
+    background-color: #e2e6ea
+    border-color: #dae0e5
+.credit
+  text-align: center
+  color: #fff
+  position: absolute
+  width: 100%
+  bottom: 20px
+  a
+    color: #03A9F4
+    text-decoration: none
+.loader
+  width: 100vw
+  height: 100vh
+  position: absolute
+  z-index: 2
+  background-color: #fff0f5
+  img
+    margin: auto
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) scale(2)
+    

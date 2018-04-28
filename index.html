@@ -2,11 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Project Nostalgia</title>
+  <link rel="stylesheet" href="./app/css/main.min.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#03A9F4">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-  
+  <div class="loader">
+    <img src="./app/img/loader.svg" alt="loader">
+  </div>
+
+  <div class="info-div">
+    <p>SCORE</p>
+    <p class="score">1</p>
+
+    <div class="credit">
+      <img src="./app/img/project_nostalgia.png" alt="Project Nostalgia" style="width: 100px; display: block; text-align: center; margin: auto">
+      <p>Project Nostalgia by
+      <a href="http://idevia.in" target="_blank" title="iDevia">iDevia</a></p>
+      
+    </div>
+  </div>
+
+  <div class="start-div">
+    <div class="wrapper">
+      <div class="display-tc">
+        <h2>Road Fighter (Alpha)</h2>
+        <button class="btn btn-light js-btn-start">Start game</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="restart-div" hidden>
+    <div class="wrapper">
+      <div class="display-tc">
+        <p class="gameover">GAME OVER!</p>
+        <h2>Road Fighter (Alpha)</h2>
+        <h4 class="js-score-display">Score: </h4>
+        <button class="btn btn-light js-btn-restart">Restart game</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="road">
+    <div class="line" id="line1"></div>
+    <div class="line" id="line2"></div>
+    <div class="line" id="line3"></div>
+
+    <div class="car" id="hero">
+      <div class="f_glass glass"></div>
+      <div class="b_glass glass"></div>
+      <div class="f_light_r light"></div>
+      <div class="f_light_l light"></div>
+      <div class="f_tyre_l tyre"></div>
+      <div class="f_tyre_r tyre"></div>
+      <div class="b_tyre_l tyre"></div>
+      <div class="b_tyre_r tyre"></div>
+    </div>
+
+    <div class="car" id="opp1">
+      <div class="f_glass glass"></div>
+      <div class="b_glass glass"></div>
+      <div class="f_light_r light"></div>
+      <div class="f_light_l light"></div>
+      <div class="f_tyre_l tyre"></div>
+      <div class="f_tyre_r tyre"></div>
+      <div class="b_tyre_l tyre"></div>
+      <div class="b_tyre_r tyre"></div>
+    </div>
+
+    <div class="car" id="opp2">
+      <div class="f_glass glass"></div>
+      <div class="b_glass glass"></div>
+      <div class="f_light_r light"></div>
+      <div class="f_light_l light"></div>
+      <div class="f_tyre_l tyre"></div>
+      <div class="f_tyre_r tyre"></div>
+      <div class="b_tyre_l tyre"></div>
+      <div class="b_tyre_r tyre"></div>
+    </div>
+
+    <div class="car" id="opp3">
+      <div class="f_glass glass"></div>
+      <div class="b_glass glass"></div>
+      <div class="f_light_r light"></div>
+      <div class="f_light_l light"></div>
+      <div class="f_tyre_l tyre"></div>
+      <div class="f_tyre_r tyre"></div>
+      <div class="b_tyre_l tyre"></div>
+      <div class="b_tyre_r tyre"></div>
+    </div>
+
+    <div class="car" id="opp4">
+      <div class="f_glass glass"></div>
+      <div class="b_glass glass"></div>
+      <div class="f_light_r light"></div>
+      <div class="f_light_l light"></div>
+      <div class="f_tyre_l tyre"></div>
+      <div class="f_tyre_r tyre"></div>
+      <div class="b_tyre_l tyre"></div>
+      <div class="b_tyre_r tyre"></div>
+    </div>
+
+  </div>
+
+  <audio autoplay id="audioPlayer" preload="auto"  hidden></audio>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./app/js/app.js"></script>
 </body>
 </html>
