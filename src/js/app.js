@@ -221,7 +221,6 @@ function start_game() {
 
   // Collision function
   function collision($obj1, $obj2) {
-
     var x1 = $obj1.offset().left;
     var y1 = $obj1.offset().top;
     var h1 = $obj1.outerHeight(true);
